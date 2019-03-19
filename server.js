@@ -9,7 +9,7 @@ app.set('port', 3001);
 app.listen(app.get('port'), () => {
   console.log(`App is running on http://localhost:${app.get('port')}.`);
 });
-
+const environment = process.env.NODE_ENV || 'development';
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
