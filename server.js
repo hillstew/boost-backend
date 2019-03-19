@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 app.use(express.json());
-app.set('port', 3001);
+app.set('port', process.env.PORT || 3001);
 
 app.listen(app.get('port'), () => {
   console.log(`App is running on http://localhost:${app.get('port')}.`);
